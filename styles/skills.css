@@ -1,0 +1,147 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+
+body {
+  background-color: #f5f5f5;
+  color: #222;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100%;
+  padding: 5px;
+  margin: 0;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* Title */
+.container h1 {
+  text-align: center;
+  font-size: 2.1rem;
+  font-weight: bolder;
+  color: #643ca6;
+  letter-spacing: 1px;
+  margin-bottom: 2.5rem;
+  position: relative;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  margin-top: 5px;
+  padding-top: 0;
+  margin-bottom: 0;
+}
+.container p{
+    text-align: center;
+    font-size: 1.2rem;
+    margin-top: 6px;
+    color:palevioletred;
+    margin-bottom: 10px;
+    
+}
+
+.skills-section {
+  display: grid;
+  width: 1200px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+/* Skill card */
+.s-card {
+  background-color: #fff;
+  border: 1px solid #e5e5e5;
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: 0.3s ease;
+  box-shadow: 3px 3px 25px rgba(0, 0, 0, 0.05);
+}
+
+.s-card:hover {
+  border-color: #643ca6;
+  transform: translateY(-5px);
+  box-shadow: 3px 6px 16px rgba(100, 60, 166, 0.2);
+}
+
+.s-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 7px;
+}
+
+.s-header h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #222;
+  margin: 5px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.s-header span {
+  font-weight: 600;
+  color: #643ca6;
+}
+
+
+.line {
+  background-color: #eee;
+  height: 8px;
+  border-radius: 6px;
+  position: relative;
+}
+
+.percent {
+  height: 100%;
+  width: 0;
+  opacity: 0;
+  background-color: #643ca6;
+  border-radius: 6px;
+  transition: width 1.5s ease, opacity 0.5s ease;
+}
+
+.s-card:hover .percent {
+  opacity: 1;
+}
+
+/* Individual widths */
+.s-card:hover .html { width: 90%; }
+.s-card:hover .js { width: 75%; }
+.s-card:hover .python { width: 80%; }
+.s-card:hover .sql { width: 85%; }
+.s-card:hover .react { width: 70%; }
+.s-card:hover .node { width: 70%; }
+.s-card:hover .C { width: 80%; }
+.s-card:hover .java { width: 60%; }
+.s-card:hover .Teamwork{ width: 90%; }
+.s-card:hover .Communication{ width: 90%; }
+.s-card:hover .Timemanagement{ width: 95%; }
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .skills-section {
+    grid-template-columns: repeat(2, 1fr);
+    width: 700px;
+    margin:  10px;
+  }
+
+  .container h1{
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 500px) {
+  .skills-section {
+    grid-template-columns: 1fr;
+    width: 300px;
+    margin: 10px;
+  }
+  .container p{
+    font-size: 0.8rem;
+  }
+}

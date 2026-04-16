@@ -1,0 +1,178 @@
+
+    /*ABOUT SECTION  */
+
+main {
+    margin: 0;
+    padding: 0;
+}
+   .about-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 70px;
+  margin-top: 100px;
+  flex-wrap: wrap;
+}
+
+/* IMAGE */
+.about-image img {
+  width: 380px;
+  height: auto;
+  border-radius: 20px;
+  object-fit: cover;
+  box-shadow: 3px 6px 15px rgba(0, 0, 0, 0.1);
+}
+.about-image img:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+.division {
+  max-width: 800px;
+}
+
+.division div h1 {
+  font-size: 3rem;
+  color:#643ca6;
+  margin-bottom: 20px;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+.division p {
+  font-size: 1.2rem;
+  line-height: 1.7;
+  color: #374151;
+  margin-bottom: 30px;
+}
+
+.readmore-button{
+  height: 45px;
+  width: 105px;
+  padding: 2px 8px;
+  border-radius: 6px;
+  border: 1px solid black;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #111827;
+  transition: transform 0.2s ease, color 0.2s ease;
+  box-shadow:3px 6px 15px rgba(0, 0, 0, 0.1),-3px -6px 15px rgba(0, 0, 0, 0.1) ;
+}
+.readmore-button:hover{
+    transform: translateX(8px);
+  background-color: #643ca6;
+  color: wheat;
+
+}
+/* Hide the paragraph first */
+p {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+/* on hover over the body, show the paragraph */
+body:hover p {
+  opacity: 1;
+}
+
+
+/*  media query for about */
+@media (max-width: 768px) {
+  .about-section {
+    flex-direction: column;
+    text-align: center;
+  
+    gap: 40px;
+    margin-top: 0;
+    padding: 0 5px ;
+  }
+  
+
+  .about-image img {
+    width: 300px;
+    height: 340px;
+    border-radius: 18px;
+  
+  }
+
+  .division {
+    max-width: 90%;
+  }
+
+  .division div h1 {
+    font-size: 2.4rem;
+    margin-top: 0;
+    
+  }
+  p {
+  opacity: 1;
+  }
+
+  .division p {
+    font-size: 1.15rem;
+    line-height: 1.6;
+    margin-bottom: 25px;
+  }
+
+  .readmore-button {
+    width: 110px;
+    height: 42px;
+    font-size: 0.95rem;
+  }
+    .details{
+    opacity: 1;
+  }
+  
+  .about-image img{
+    margin-top: 0;
+  }
+
+}
+
+
+/*  Samsung Galaxy S8+ (≤360px) */
+
+@media (max-width: 360px) {
+  .about-section {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+    margin-top: 10px;
+    padding: 0 10px;
+  }
+
+  .about-image img {
+    width: 250px;
+    height: 200px;
+    object-fit: fill;
+    margin: 0;
+    padding: 0;
+  }
+
+  .division {
+    max-width: 100%;
+  }
+
+  .division div h1 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    margin-top: 0;
+    padding-top: 0;
+  }
+
+  .division p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+   p {
+  opacity: 1;
+  }
+
+  .readmore-button {
+    width: 100px;
+    height: 38px;
+    font-size: 0.9rem;
+  }
+
+}
+
